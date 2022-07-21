@@ -175,15 +175,12 @@ ion-icon{
 
 .tela1 .cards .card .cartaResposta{
     font-weight: 300;
-    margin-top: 20px;
+    margin-top: 20px;  
     font-size: 15px;
     font-family: 'Recursive', sans-serif;
     word-break: break-all;
     align-items: flex-end;
     
-    
-
-   
 }
 
 .tela1 .cards .card .cartaResposta{
