@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Recursive', sans-serif; */
+*{font-family: 'Righteous', cursive;}
+
+body{
+    background-color: #FB6B6B;
+    font-family: 'Righteous', cursive;
+
+}
+.telaInicial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+ 
+}
+.telaInicial .container{
+    
+    position: absolute;
+    top: 25%;
+    margin: 0 auto;
+  
+}
+.telaInicial img{
+margin-left: 40px;
+}
+.telaInicial h1{
+    color: white;
+    margin: 40px;
+}
+.telaInicial button{
+    background-color: white;
+    border-radius: 5px;
+    width: 246px;
+    color: #D70900;
+    border: none;
+    height: 54px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    font-family: 'Righteous', cursive;
+    font-size: 18px;
+    font-weight: 100;
+}
+.hide {
+    display: none;
+}
+
+.tela1 .topo{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela1 .containerTopo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+.tela1 .containerTopo h1{
+    color: white;
+    font-weight: 200;
+    font-size: 48px;
+    margin-left: 20px;
+    
+}
+.tela1 .containerTopo img{
+    width: 70px;
+}
+
+.tela1 .barraInferior{
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-left: -8px;
+    z-index: 1;
+
+
+}
+.tela1 .barraInferior .icons{
+    display: flex;
+}
+
+ion-icon{
+    font-size: 23px;
+}
+.Errou{
+    color: #FF3030 ;
+    text-decoration: line-through;
+     
+}
+.Quase{
+    color: #FF922E
+}
+
+.Zap{
+    color: #2FBE34; 
+
+}
+
+
+
+.tela1 .cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.tela1 .cards .card{
+    background-color: aliceblue;
+    width: 300px;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+.tela1 .cards .card ion-icon{
+    font-size: 30px;
+}
+.tela1 .cards .card .cartaCostas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tela1 .cards .card .cartaCostas.EscolheuCard{
+  display: none;
+}
+
+.tela1 .cards .card.EscolheuCard{
+    background-color: #FFFFD4;
+    height: 131px;
+    align-items: flex-start;
+    position: relative; 
+    transition: all 0.4s ease-out;
+}
+
+
+.tela1 .cards .card .cartaConteudo.EscolheuCard{
+    display: initial;
+    font-weight: 300;
+    margin-top: 20px;
+    font-family: 'Recursive', sans-serif;
+
+}
+.tela1 .cards .card .cartaConteudo.EscolheuCard img{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+.tela1 .cards .card .cartaConteudo{
+    display: none;
+}
+
+.tela1 .cards .card .cartaConteudo.EscolheuCard.PediuResposta{
+    display: none;
+    transition: all 1s;
+}
+
+.tela1 .cards .card .cartaResposta{
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: 'Recursive', sans-serif;
+    word-break: break-all;
+    align-items: flex-end;
+    
+    
+
+   
+}
+
+.tela1 .cards .card .cartaResposta{
+    display: none;
+
+}
+.tela1 .cards .card .cartaResposta.PediuResposta{
+    display: initial;
+    transform: translateX(-3.142rad);
+ 
+}
+
+.tela1 .cards .card .cartaResposta .boxes{
+    width: 90%;
+    display: flex;
+ 
+    justify-content: space-around;
+    position: absolute;
+    bottom: 10px;
+    left: 18px;
+ 
+
+}
+.tela1 .cards .card .cartaResposta .boxes div{
+    width: 85px;
+    height: 37px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 400;
+    cursor:pointer;
+    
+}
+
+.tela1 .cards .card .cartaResposta .boxes div:hover{
+    transform: scale(1.1);
+transition: all 0.3s ease-in-out;
+}
+
+
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(1){
+    background-color: #FF3030;
+    word-break: normal;
+    box-sizing: border-box;
+    padding-left: 11px;
+    
+}
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(1):hover{
+    background-color: #ff7979;
+
+}
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(2){
+    background-color: #FF922E;
+    box-sizing: border-box;
+    padding-left: 6px;
+}
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(2):hover{
+    background-color: #ecad71;
+  
+
+}
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(3){
+    background-color: #2FBE34;
+}
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(3):hover{
+    background-color: #6eb371;
+
+}
+
