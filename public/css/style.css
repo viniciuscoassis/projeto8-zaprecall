@@ -24,11 +24,12 @@ body{
   
 }
 .telaInicial img{
-margin-left: 40px;
+margin-left: 50px;
 }
 .telaInicial h1{
     color: white;
-    margin: 40px;
+    margin: 40px 0;
+    font-size: 52px;
 }
 .telaInicial button{
     background-color: white;
@@ -41,6 +42,12 @@ margin-left: 40px;
     font-family: 'Righteous', cursive;
     font-size: 18px;
     font-weight: 100;
+}
+.telaInicial button:hover{
+transform: scale(1.1);
+transition: all 0.3s ease-in-out;
+cursor: pointer;
+
 }
 .hide {
     display: none;
@@ -209,7 +216,8 @@ ion-icon[name="iconPlay"]:hover{
 }
 
 .tela1 .cards .card .cartaConteudo{
-    display: none;
+    display:    none ;
+
 }
 
 .tela1 .cards .card .cartaConteudo.EscolheuCard.PediuResposta{
@@ -223,10 +231,11 @@ ion-icon[name="iconPlay"]:hover{
     font-family: 'Recursive', sans-serif;
     word-break: break-all;
     align-items: flex-end;
+    transform: translateY(180deg);
+    transition: all 2s linear;
      
     
 }
-
 .tela1 .cards .card .cartaResposta{
     display: none;
 
@@ -238,7 +247,6 @@ ion-icon[name="iconPlay"]:hover{
 .tela1 .cards .card .cartaResposta .boxes{
     width: 90%;
     display: flex;
- 
     justify-content: space-around;
     position: absolute;
     bottom: 10px;
