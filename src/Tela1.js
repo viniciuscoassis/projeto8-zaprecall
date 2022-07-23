@@ -17,9 +17,10 @@ export default function Tela1() {
     {Q: "Usamos o npm para __", R: "gerenciar os pacotes necessários e suas dependências"},
     {Q: "Usamos props para __", R: "passar diferentes informações para componentes"} 
   ]
+
   let tamanhoDeck = deck.length;
 
-  const [iconesRespostas,setIconesRespostas] = React.useState({nomeIcon: "close-circle", status: "errou"});
+  const [iconesRespostas,setIconesRespostas] = React.useState([]);
   const [contador, setContador] = React.useState(0);
 
 
@@ -32,7 +33,8 @@ export default function Tela1() {
      iconesRespostas={iconesRespostas} 
      setIconesRespostas={setIconesRespostas} 
      setContador={setContador}
-     contador={contador}/>
+     contador={contador}
+     deck={deck}/>
 
     <BarraInferior tamanhoDeck={tamanhoDeck} iconesRespostas={iconesRespostas} contador={contador}/>
     </div>

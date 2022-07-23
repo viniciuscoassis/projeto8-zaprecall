@@ -94,18 +94,45 @@ margin-left: 40px;
 ion-icon{
     font-size: 23px;
 }
-.Errou{
-    color: #FF3030 ;
-    text-decoration: line-through;
-     
+
+ion-icon[name="checkmark-circle"]{
+    color: #2FBE34; 
 }
+
+ion-icon[name="help-circle"]{
+    color: #FF922E
+}
+
+ion-icon[name="close-circle"]{
+    color: #FF3030 ;
+}
+ion-icon[name="iconPlay"]:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.Zap{
+    color: #2FBE34; 
+}
+
 .Quase{
     color: #FF922E
 }
 
-.Zap{
-    color: #2FBE34; 
+.Errou{
+    color: #FF3030 ;
 
+}
+
+.cartaCostas > .Errou{
+    text-decoration: line-through;
+}
+.cartaCostas > .Quase{
+    text-decoration: line-through;
+}
+.cartaCostas > .Zap{
+    text-decoration: line-through;
 }
 
 
@@ -115,6 +142,7 @@ ion-icon{
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
+    margin-bottom: 70px;
 }
 
 .tela1 .cards .card{
@@ -128,10 +156,26 @@ ion-icon{
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
     padding: 0 30px;
+    
 }
+
+
+.tela1 .cards .card:hover{
+    transform: scale(1.005);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
 .tela1 .cards .card ion-icon{
     font-size: 30px;
 }
+.tela1 .cards .card ion-icon:hover{
+    transform: scale(1.5);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
 .tela1 .cards .card .cartaCostas{
     width: 100%;
     display: flex;
@@ -170,7 +214,6 @@ ion-icon{
 
 .tela1 .cards .card .cartaConteudo.EscolheuCard.PediuResposta{
     display: none;
-    transition: all 1s;
 }
 
 .tela1 .cards .card .cartaResposta{
@@ -180,6 +223,7 @@ ion-icon{
     font-family: 'Recursive', sans-serif;
     word-break: break-all;
     align-items: flex-end;
+     
     
 }
 
@@ -189,8 +233,6 @@ ion-icon{
 }
 .tela1 .cards .card .cartaResposta.PediuResposta{
     display: initial;
-    transform: translateX(-3.142rad);
- 
 }
 
 .tela1 .cards .card .cartaResposta .boxes{
@@ -250,5 +292,9 @@ transition: all 0.3s ease-in-out;
 .tela1 .cards .card .cartaResposta .boxes div:nth-child(3):hover{
     background-color: #6eb371;
 
+}
+
+.flip{
+    transform: translateY(-180deg);
 }
 
