@@ -1,18 +1,11 @@
-import Tela1 from "./Tela1"
-import TelaInicial from "./TelaInicial"
+import Tela1 from "./Tela1";
+import TelaInicial from "./TelaInicial";
 import React from "react";
 
-export default function App (){
+export default function App() {
+  const [tela, setTela] = React.useState(true);
 
-    const [tela,setTela] = React.useState(true);
-
-    return (
-
-    <> 
-
-    {tela ? (<TelaInicial setTela={setTela} tela={tela} />) : ( <Tela1 />)}
-    
-    </>
-
-    )
+  return (
+    <>{tela ? <TelaInicial setTela={setTela} tela={tela} /> : <Tela1 />}</>
+  );
 }

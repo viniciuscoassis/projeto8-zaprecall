@@ -1,342 +1,304 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap");
 /* font-family: 'Recursive', sans-serif; */
-*{
-font-family: 'Righteous', cursive;
-box-sizing: border-box;}
-
-body{
-    background-color: #FB6B6B;
-    font-family: 'Righteous', cursive;
-
-
-
+* {
+  font-family: "Righteous", cursive;
+  box-sizing: border-box;
 }
-.telaInicial{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
- 
+body {
+  background-color: #fb6b6b;
+  font-family: "Righteous", cursive;
 }
-.telaInicial .container{
-    
-    position: absolute;
-    top: 25%;
-    margin: 0 auto;
-  
+.telaInicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.telaInicial img{
-margin-left: 50px;
+.telaInicial .container {
+  position: absolute;
+  top: 25%;
+  margin: 0 auto;
 }
-.telaInicial h1{
-    color: white;
-    margin: 40px 0;
-    font-size: 52px;
+.telaInicial img {
+  margin-left: 50px;
 }
-.telaInicial button{
-    background-color: white;
-    border-radius: 5px;
-    width: 246px;
-    color: #D70900;
-    border: none;
-    height: 54px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    font-family: 'Righteous', cursive;
-    font-size: 18px;
-    font-weight: 100;
+.telaInicial h1 {
+  color: white;
+  margin: 40px 0;
+  font-size: 52px;
 }
-.telaInicial button:hover{
-transform: scale(1.1);
-transition: all 0.3s ease-in-out;
-cursor: pointer;
-
+.telaInicial button {
+  background-color: white;
+  border-radius: 5px;
+  width: 246px;
+  color: #d70900;
+  border: none;
+  height: 54px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  font-family: "Righteous", cursive;
+  font-size: 18px;
+  font-weight: 100;
+}
+.telaInicial button:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .hide {
-    display: none;
-}
-
-.tela1 .topo{
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tela1 .containerTopo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-}
-.tela1 .containerTopo h1{
-    color: white;
-    font-weight: 200;
-    font-size: 48px;
-    margin-left: 20px;
-    
-}
-.tela1 .containerTopo img{
-    width: 70px;
-}
-
-.tela1 .barraInferior{
-    background-color: white;
-    width: 100%;
-    min-height: 50px;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin-left: -8px;
-    z-index: 1;
-    font-family: 'Recursive', sans-serif;
-
-    box-sizing: border-box;
-
-}
-
-.tela1 .barraInferior .barraInferiorConteudo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 222px;
-    margin: 15px 0;
-
-}
-
-.tela1 .barraInferior .tituloFinal {
-    display: flex;
-
-}
-
-
-.tela1 .barraInferior .tituloFinal h1{
-
-    margin-left: 10px;
-
-}
-
-.tela1 .barraInferior .mensagemFinal {
-
-    text-align: center;
-    margin: 10px 0;
-
-}
-
-
-.tela1 .barraInferior .icons{
-    display: flex;
-
-}
-
-ion-icon{
-    font-size: 23px;
-}
-
-ion-icon[name="checkmark-circle"]{
-    color: #2FBE34; 
-}
-
-ion-icon[name="help-circle"]{
-    color: #FF922E
-}
-
-ion-icon[name="close-circle"]{
-    color: #FF3030 ;
-}
-
-.Zap{
-    color: #2FBE34; 
-}
-
-.Quase{
-    color: #FF922E
-}
-
-.Errou{
-    color: #FF3030 ;
-
-}
-
-.cartaCostas > .Errou{
-    text-decoration: line-through;
-}
-.cartaCostas > .Quase{
-    text-decoration: line-through;
-}
-.cartaCostas > .Zap{
-    text-decoration: line-through;
-}
-
-.tela1 .cards {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 10%;
-}
-
-.tela1 .cards .card.ajuste:last-child{
-    margin-bottom: 75px;
-}
-
-
-.tela1 .cards .card{
-    background-color: aliceblue;
-    width: 300px;
-    height: 65px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
-    padding: 0 30px;
-    
-}
-
-
-.tela1 .cards .card:hover{
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-
-.tela1 .cards .card ion-icon{
-    font-size: 30px;
-}
-.tela1 .cards .card ion-icon:hover{
-    transform: scale(1.5);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.tela1 .cards .card .cartaCostas{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.tela1 .cards .card .cartaCostas.EscolheuCard{
   display: none;
 }
 
-.tela1 .cards .card.EscolheuCard{
-    background-color: #FFFFD4;
-    height: 131px;
-    align-items: flex-start;
-    position: relative; 
-    transition: all 0.4s ease-out;
+.tela1 .topo {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.tela1 .cards .card .cartaConteudo.EscolheuCard{
-    display: initial;
-    font-weight: 300;
-    margin-top: 20px;
-    font-family: 'Recursive', sans-serif;
-
+.tela1 .containerTopo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
 }
-.tela1 .cards .card .cartaConteudo.EscolheuCard img{
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
+.tela1 .containerTopo h1 {
+  color: white;
+  font-weight: 200;
+  font-size: 48px;
+  margin-left: 20px;
 }
-
-.tela1 .cards .card .cartaConteudo{
-    display:    none ;
-
+.tela1 .containerTopo img {
+  width: 70px;
 }
 
-.tela1 .cards .card .cartaConteudo.EscolheuCard.PediuResposta{
-    display: none;
+.tela1 .barraInferior {
+  background-color: white;
+  width: 100%;
+  min-height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-left: -8px;
+  z-index: 1;
+  font-family: "Recursive", sans-serif;
+
+  box-sizing: border-box;
 }
 
-.tela1 .cards .card .cartaResposta{
-    font-weight: 300;
-    margin-top: 20px;  
-    font-size: 15px;
-    font-family: 'Recursive', sans-serif;
-    word-break: break-all;
-    align-items: flex-end;
-    transform: translateY(180deg);
-    transition: all 2s linear;
-        
-}
-.tela1 .cards .card .cartaResposta{
-    display: none;
-
-}
-.tela1 .cards .card .cartaResposta.PediuResposta{
-    display: initial;
+.tela1 .barraInferior .barraInferiorConteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 222px;
+  margin: 15px 0;
 }
 
-.tela1 .cards .card .cartaResposta .boxes{
-    width: 90%;
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    bottom: 10px;
-    left: 18px;
- 
-
-}
-.tela1 .cards .card .cartaResposta .boxes div{
-    width: 85px;
-    height: 37px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 400;
-    cursor:pointer;
-    
+.tela1 .barraInferior .tituloFinal {
+  display: flex;
 }
 
-.tela1 .cards .card .cartaResposta .boxes div:hover{
-    transform: scale(1.1);
-transition: all 0.3s ease-in-out;
+.tela1 .barraInferior .tituloFinal h1 {
+  margin-left: 10px;
 }
 
-
-.tela1 .cards .card .cartaResposta .boxes div:nth-child(1){
-    background-color: #FF3030;
-    word-break: normal;
-    box-sizing: border-box;
-    padding-left: 11px;
-    
-}
-.tela1 .cards .card .cartaResposta .boxes div:nth-child(1):hover{
-    background-color: #ff7979;
-
-}
-.tela1 .cards .card .cartaResposta .boxes div:nth-child(2){
-    background-color: #FF922E;
-    box-sizing: border-box;
-    padding-left: 6px;
-}
-.tela1 .cards .card .cartaResposta .boxes div:nth-child(2):hover{
-    background-color: #ecad71;
-  
-
-}
-.tela1 .cards .card .cartaResposta .boxes div:nth-child(3){
-    background-color: #2FBE34;
-}
-.tela1 .cards .card .cartaResposta .boxes div:nth-child(3):hover{
-    background-color: #6eb371;
-
+.tela1 .barraInferior .mensagemFinal {
+  text-align: center;
+  margin: 10px 0;
 }
 
-.flip{
-    transform: translateY(-180deg);
+.tela1 .barraInferior .icons {
+  display: flex;
 }
 
+ion-icon {
+  font-size: 23px;
+}
+
+ion-icon[name="checkmark-circle"] {
+  color: #2fbe34;
+}
+
+ion-icon[name="help-circle"] {
+  color: #ff922e;
+}
+
+ion-icon[name="close-circle"] {
+  color: #ff3030;
+}
+
+.Zap {
+  color: #2fbe34;
+}
+
+.Quase {
+  color: #ff922e;
+}
+
+.Errou {
+  color: #ff3030;
+}
+
+.cartaCostas > .Errou {
+  text-decoration: line-through;
+}
+.cartaCostas > .Quase {
+  text-decoration: line-through;
+}
+.cartaCostas > .Zap {
+  text-decoration: line-through;
+}
+
+.tela1 .cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 10%;
+}
+
+.tela1 .cards .card.ajuste:last-child {
+  margin-bottom: 75px;
+}
+
+.tela1 .cards .card {
+  background-color: aliceblue;
+  width: 300px;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+
+.tela1 .cards .card:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.tela1 .cards .card ion-icon {
+  font-size: 30px;
+}
+.tela1 .cards .card ion-icon:hover {
+  transform: scale(1.5);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.tela1 .cards .card .cartaCostas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tela1 .cards .card .cartaCostas.EscolheuCard {
+  display: none;
+}
+
+.tela1 .cards .card.EscolheuCard {
+  background-color: #ffffd4;
+  height: 131px;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.4s ease-out;
+}
+
+.tela1 .cards .card .cartaConteudo.EscolheuCard {
+  display: initial;
+  font-weight: 300;
+  margin-top: 20px;
+  font-family: "Recursive", sans-serif;
+}
+.tela1 .cards .card .cartaConteudo.EscolheuCard img {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+
+.tela1 .cards .card .cartaConteudo {
+  display: none;
+}
+
+.tela1 .cards .card .cartaConteudo.EscolheuCard.PediuResposta {
+  display: none;
+}
+
+.tela1 .cards .card .cartaResposta {
+  font-weight: 300;
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: "Recursive", sans-serif;
+  word-break: break-all;
+  align-items: flex-end;
+  transform: translateY(180deg);
+  transition: all 2s linear;
+}
+.tela1 .cards .card .cartaResposta {
+  display: none;
+}
+.tela1 .cards .card .cartaResposta.PediuResposta {
+  display: initial;
+}
+
+.tela1 .cards .card .cartaResposta .boxes {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 10px;
+  left: 18px;
+}
+.tela1 .cards .card .cartaResposta .boxes div {
+  width: 85px;
+  height: 37px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.tela1 .cards .card .cartaResposta .boxes div:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(1) {
+  background-color: #ff3030;
+  word-break: normal;
+  box-sizing: border-box;
+  padding-left: 11px;
+}
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(1):hover {
+  background-color: #ff7979;
+}
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(2) {
+  background-color: #ff922e;
+  box-sizing: border-box;
+  padding-left: 6px;
+}
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(2):hover {
+  background-color: #ecad71;
+}
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(3) {
+  background-color: #2fbe34;
+}
+.tela1 .cards .card .cartaResposta .boxes div:nth-child(3):hover {
+  background-color: #6eb371;
+}
+
+.flip {
+  transform: translateY(-180deg);
+}
