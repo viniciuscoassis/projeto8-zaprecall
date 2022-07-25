@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Card({contador, setContador, iconesRespostas, setIconesRespostas, pergunta, resposta, numPergunta}){
+export default function Card({setConcluiu,concluiu,tamanhoDeck, contador, setContador, iconesRespostas, setIconesRespostas, pergunta, resposta, numPergunta}){
   
   const icons = 
   {
@@ -13,6 +13,7 @@ zap: {name: "checkmark-circle", status: "Zap"},
   const [PedeResposta,setPedeResposta] = React.useState("");
   const [concluido, setConcluido] = React.useState("");
   const [iconPlay,setIconPlay] = React.useState("play-outline");
+  
 
   function trabalhaResposta(resposta){
     let i = icons.errou;
@@ -40,12 +41,18 @@ zap: {name: "checkmark-circle", status: "Zap"},
     setEscolheuCard("");
     setPedeResposta("");
     setContador(contador+1);
+    console.log(iconesRespostas.length);
+    console.log(tamanhoDeck);
+
+    if (iconesRespostas.length + 1 == tamanhoDeck){
+      setConcluiu("concluiu");
+    }
   
   }
   
     return (
-<div className= {`card ${EscolheuCard}`} >
-        <div className={`cartaCostas ${EscolheuCard}`}>
+<div className= {`card ${EscolheuCard} ${concluiu}`} >
+        <div className={`cartaCostas ${EscolheuCard} `} onClick={iconPlay == "play-outline"? (() => setEscolheuCard('EscolheuCard')) : (()=> alert("Card Já Respondido"))}>
         <h3 className= {concluido} > Pergunta {numPergunta} </h3>
           <ion-icon name={iconPlay} onClick={iconPlay == "play-outline"? (() => setEscolheuCard('EscolheuCard')) : (()=> alert("Card Já Respondido"))} ></ion-icon>
         </div>

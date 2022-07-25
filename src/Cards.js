@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 
 
-export default function Cards({deck, iconesRespostas,setIconesRespostas, contador, setContador}){
+export default function Cards({tamanhoDeck, deck, iconesRespostas,setIconesRespostas, contador, setContador}){
 
     return(
 
@@ -18,6 +18,8 @@ iconesRespostas={iconesRespostas}
 setIconesRespostas={setIconesRespostas}
 contador={contador}
 setContador ={setContador}
+tamanhoDeck={tamanhoDeck}
+
 />))
 }
 
