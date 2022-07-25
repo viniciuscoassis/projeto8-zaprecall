@@ -45,6 +45,7 @@ export default function Tela1() {
         deck={deck} 
         tamanhoDeck={tamanhoDeck} 
         setMensagemConcluido={setMensagemConcluido}
+        mensagemConcluido={mensagemConcluido}
       
       />
         

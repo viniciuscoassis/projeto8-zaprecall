@@ -106,7 +106,7 @@ cursor: pointer;
     align-items: center;
     justify-content: center;
     width: 222px;
-    margin: 20px 0;
+    margin: 15px 0;
 
 }
 
@@ -119,22 +119,20 @@ cursor: pointer;
 .tela1 .barraInferior .tituloFinal h1{
 
     margin-left: 10px;
-    margin-top: 10px;
+
 }
 
 .tela1 .barraInferior .mensagemFinal {
 
     text-align: center;
     margin: 10px 0;
+
 }
-.tela1 .barraInferior .mensagemFinal {
-    display: flex;
-    justify-content: center;
-}
+
 
 .tela1 .barraInferior .icons{
     display: flex;
-    margin-top: 10px;
+
 }
 
 ion-icon{
@@ -184,6 +182,9 @@ ion-icon[name="close-circle"]{
     margin-bottom: 10%;
 }
 
+.tela1 .cards .card.ajuste:last-child{
+    margin-bottom: 75px;
+}
 
 
 .tela1 .cards .card{

@@ -1,8 +1,9 @@
 import React from "react";
 import turn from "./img/turn.png"
 import party from "./img/party 2.png"
+import sad from "./img/sad 7.png"
 
-export default function Card({setMensagemConcluido,tamanhoDeck, contador, setContador, iconesRespostas, setIconesRespostas, pergunta, resposta, numPergunta}){
+export default function Card({mensagemConcluido,setMensagemConcluido,tamanhoDeck, contador, setContador, iconesRespostas, setIconesRespostas, pergunta, resposta, numPergunta}){
   
   const icons = 
   {
@@ -15,7 +16,7 @@ zap: {name: "checkmark-circle", status: "Zap"},
 
     {
   ganhou: {titulo: "Parabéns!", emoji: party, texto: "Você não esqueceu de nenhum flashcard!"},
-  perdeu: {titulo: "Parabéns!", emoji: "sad", texto: "Você não esqueceu de nenhum flashcard!"}
+  perdeu: {titulo: "Putz...", emoji: sad, texto: "Ainda faltam alguns...Mas não desanime!!"}
   }
 
   const [EscolheuCard,setEscolheuCard] = React.useState("");
@@ -25,6 +26,7 @@ zap: {name: "checkmark-circle", status: "Zap"},
   
 
   function trabalhaResposta(resposta){
+
     let i = icons.errou;
     if (resposta == "errou"){
       setIconesRespostas([...iconesRespostas, i]);
@@ -50,17 +52,25 @@ zap: {name: "checkmark-circle", status: "Zap"},
     setEscolheuCard("");
     setPedeResposta("");
     setContador(contador+1);
-    console.log(iconesRespostas.length);
-    console.log(tamanhoDeck);
 
+    let errado = 0;
     if (iconesRespostas.length + 1 == tamanhoDeck){
-      setMensagemConcluido(mensagensFinais.ganhou)
+      
+      for (let i = 0; i < iconesRespostas.length; i++){
+        if (iconesRespostas[i].status == "Errou"){
+          errado = 1;
+        }    
+      }
+
+      if (errado == 1){
+        setMensagemConcluido(mensagensFinais.perdeu);
+      } else (setMensagemConcluido(mensagensFinais.ganhou))
     }
   
   }
   
     return (
-<div className= {`card ${EscolheuCard}`} >
+<div className= {`card ${EscolheuCard} ${mensagemConcluido ? "ajuste" : ""}`} >
         <div className={`cartaCostas ${EscolheuCard} `} onClick={iconPlay == "play-outline"? (() => setEscolheuCard('EscolheuCard')) : (()=> alert("Card Já Respondido"))}>
         <h3 className= {concluido} > Pergunta {numPergunta} </h3>
           <ion-icon name={iconPlay} onClick={iconPlay == "play-outline"? (() => setEscolheuCard('EscolheuCard')) : (()=> alert("Card Já Respondido"))} ></ion-icon>

@@ -2,11 +2,11 @@ import React from "react";
 import Card from "./Card";
 
 
-export default function Cards({setMensagemConcluido, tamanhoDeck, deck, iconesRespostas,setIconesRespostas, contador, setContador}){
+export default function Cards({mensagemConcluido,setMensagemConcluido, tamanhoDeck, deck, iconesRespostas,setIconesRespostas, contador, setContador}){
 
     return(
 
-    <div className="cards">
+    <div className={`cards`}>
 
 {deck.map((daVez, index) => 
  ( <Card 
@@ -20,6 +20,7 @@ contador={contador}
 setContador ={setContador}
 tamanhoDeck={tamanhoDeck}
 setMensagemConcluido={setMensagemConcluido}
+mensagemConcluido ={mensagemConcluido}
 
 />))
 }

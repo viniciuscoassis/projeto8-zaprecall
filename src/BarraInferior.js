@@ -14,7 +14,7 @@ export default function BarraInferior({mensagemConcluido ,tamanhoDeck, iconesRes
 <h1> {mensagemConcluido.titulo} </h1>
 </div>
 
-<div className={`mensagemConcluido`}> {mensagemConcluido.texto}</div>
+<div className={`mensagemFinal`}> {mensagemConcluido.texto}</div>
 
 <div className="concluidos">{contador}/{tamanhoDeck} CONCLUÍDOS </div>
 
