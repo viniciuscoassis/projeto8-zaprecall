@@ -3,8 +3,9 @@ import Cards from "./Cards"
 import BarraInferior from "./BarraInferior"
 import Logo from "./LogoTela1"
 
-
-
+function comparador() { 
+	return Math.random() - 0.5; 
+}
 
 export default function Tela1() {
 
@@ -21,12 +22,14 @@ export default function Tela1() {
     { Q: "Usamos estado (state) para __", R: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }
   ]
 
+  deck = deck.sort(comparador);
+
   let tamanhoDeck = deck.length;
 
   const [iconesRespostas, setIconesRespostas] = React.useState([]);
   const [contador, setContador] = React.useState(0);
 
-  const [ganhouPerdeu,setGanhouPerdeu] = React.useState("");
+  const [mensagemConcluido,setMensagemConcluido] = React.useState("");
 
 
   return (
@@ -41,12 +44,12 @@ export default function Tela1() {
         contador={contador}
         deck={deck} 
         tamanhoDeck={tamanhoDeck} 
-        ganhouPerdeu={ganhouPerdeu}
-        setGanhouPerdeu ={setGanhouPerdeu}
+        setMensagemConcluido={setMensagemConcluido}
+      
       />
         
 
-      <BarraInferior ganhouPerdeu={ganhouPerdeu} tamanhoDeck={tamanhoDeck} iconesRespostas={iconesRespostas} contador={contador} />
+      <BarraInferior mensagemConcluido={mensagemConcluido} tamanhoDeck={tamanhoDeck} iconesRespostas={iconesRespostas} contador={contador} />
     </div>
   );
 }

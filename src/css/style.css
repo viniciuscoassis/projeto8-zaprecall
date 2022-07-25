@@ -9,6 +9,8 @@ body{
     background-color: #FB6B6B;
     font-family: 'Righteous', cursive;
 
+
+
 }
 .telaInicial{
     display: flex;
@@ -82,7 +84,7 @@ cursor: pointer;
 .tela1 .barraInferior{
     background-color: white;
     width: 100%;
-    min-height: 70px;
+    min-height: 50px;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -117,12 +119,17 @@ cursor: pointer;
 .tela1 .barraInferior .tituloFinal h1{
 
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 .tela1 .barraInferior .mensagemFinal {
 
     text-align: center;
     margin: 10px 0;
+}
+.tela1 .barraInferior .mensagemFinal {
+    display: flex;
+    justify-content: center;
 }
 
 .tela1 .barraInferior .icons{

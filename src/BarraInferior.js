@@ -1,4 +1,7 @@
-export default function BarraInferior({ tamanhoDeck, iconesRespostas, contador}) {
+import party from "./img/party 2.png"
+import sad from "./img/sad 7.png"
+
+export default function BarraInferior({mensagemConcluido ,tamanhoDeck, iconesRespostas, contador}) {
 
     return(
 
@@ -6,12 +9,12 @@ export default function BarraInferior({ tamanhoDeck, iconesRespostas, contador})
 
 <div className="barraInferiorConteudo">
   
-<div className= {`tituloFinal `} >
-<img src="" />
-<h1> </h1>
+<div className= {`tituloFinal `} > 
+<img src={mensagemConcluido.emoji}/>
+<h1> {mensagemConcluido.titulo} </h1>
 </div>
 
-<div className={`mensagemFinal`}> </div>
+<div className={`mensagemConcluido`}> {mensagemConcluido.texto}</div>
 
 <div className="concluidos">{contador}/{tamanhoDeck} CONCLUÍDOS </div>
 

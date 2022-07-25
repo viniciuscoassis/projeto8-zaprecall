@@ -1,12 +1,21 @@
 import React from "react";
+import turn from "./img/turn.png"
+import party from "./img/party 2.png"
 
-export default function Card({setConcluiu,concluiu,tamanhoDeck, contador, setContador, iconesRespostas, setIconesRespostas, pergunta, resposta, numPergunta}){
+export default function Card({setMensagemConcluido,tamanhoDeck, contador, setContador, iconesRespostas, setIconesRespostas, pergunta, resposta, numPergunta}){
   
   const icons = 
   {
 errou: {name: "close-circle", status: "Errou"},
 quase: {name: "help-circle", status: "Quase"},
 zap: {name: "checkmark-circle", status: "Zap"},
+  }
+
+  const mensagensFinais = 
+
+    {
+  ganhou: {titulo: "Parabéns!", emoji: party, texto: "Você não esqueceu de nenhum flashcard!"},
+  perdeu: {titulo: "Parabéns!", emoji: "sad", texto: "Você não esqueceu de nenhum flashcard!"}
   }
 
   const [EscolheuCard,setEscolheuCard] = React.useState("");
@@ -45,13 +54,13 @@ zap: {name: "checkmark-circle", status: "Zap"},
     console.log(tamanhoDeck);
 
     if (iconesRespostas.length + 1 == tamanhoDeck){
-      setConcluiu("concluiu");
+      setMensagemConcluido(mensagensFinais.ganhou)
     }
   
   }
   
     return (
-<div className= {`card ${EscolheuCard} ${concluiu}`} >
+<div className= {`card ${EscolheuCard}`} >
         <div className={`cartaCostas ${EscolheuCard} `} onClick={iconPlay == "play-outline"? (() => setEscolheuCard('EscolheuCard')) : (()=> alert("Card Já Respondido"))}>
         <h3 className= {concluido} > Pergunta {numPergunta} </h3>
           <ion-icon name={iconPlay} onClick={iconPlay == "play-outline"? (() => setEscolheuCard('EscolheuCard')) : (()=> alert("Card Já Respondido"))} ></ion-icon>
@@ -59,7 +68,7 @@ zap: {name: "checkmark-circle", status: "Zap"},
 
         <div className={`cartaConteudo ${EscolheuCard} ${PedeResposta}`}>
           {pergunta}
-          <img src="./img/turn.png" onClick={() => setPedeResposta("PediuResposta")}></img>
+          <img src={turn} onClick={() => setPedeResposta("PediuResposta")}></img>
         </div>
 
         <div className={`cartaResposta ${PedeResposta}`}>
